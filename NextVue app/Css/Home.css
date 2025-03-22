@@ -1,0 +1,140 @@
+/* ------------------------------------------------------------------------------- */
+/* FILE RESET */
+body {
+  background-color: var(--bg-dark);
+  text-align: center;
+  font-family: Poppins;
+}
+
+body,
+h1,
+p,
+button,
+div,
+img,
+br,
+span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------- */
+/* ROOT VARIABLES */
+:root {
+  --bg-dark: #000409;
+  --bg-gray: #1a222b;
+  --green: #d0ff15;
+  --white: #f0f5fa;
+  --red: #ff153f;
+}
+/* ------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------- */
+/* UTILITY CLASSES */
+.h1 {
+  font-size: 38px;
+  font-weight: bold;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.p {
+  color: var(--white);
+  line-height: 1.8;
+  font-size: 16px;
+  max-width: 410px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.img {
+  background-color: var(--white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(110px, 250px));
+  grid-template-areas:
+    'Movies Series'
+    'Library Library';
+  gap: 14px;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+#Library {
+  grid-area: Library;
+}
+
+.button {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 38px;
+  color: var(--white);
+  background-color: var(--bg-gray);
+  border: none;
+  border-radius: 18px;
+  transition: 0.15s;
+  user-select: none;
+  text-align: center;
+}
+.button:hover {
+  color: var(--bg-gray);
+  background-color: var(--green);
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------- */
+/* MEDIA QUERIS */
+
+/* Phones */
+@media (max-width: 480px) {
+  .button {
+    font-size: 16px;
+    padding: 28px;
+  }
+
+  .grid {
+    gap: 8px;
+  }
+
+  .h1 {
+    font-size: 28px;
+  }
+
+  .p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .button {
+    padding: 32px;
+  }
+
+  .h1 {
+    font-size: 32px;
+  }
+
+  .p {
+    font-size: 16px;
+  }
+}
+
+/* ------------------------------------------------------------------------------- */
